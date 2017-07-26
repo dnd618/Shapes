@@ -1,0 +1,36 @@
+#container {
+    border-radius: 5em;
+    border: 6px dashed orange;
+    width: 600px;
+    height: 600px;
+    background-color: cornflowerblue;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    float: right;
+}
+
+p {
+    font-size: 3em;
+    color: orange;
+    text-align: center;
+    font-weight: bold;
+    font-family: fantasy;
+}
+
+body {
+    background-color: indianred;
+}
+
+#sidebar {
+    width: 20em;
+    height: 20em;
+    background-color: cornflowerblue;
+    border: 5px dashed orange;
+    border-radius: 3em;
+}
+
+form {
+    margin-left: 6em;
+    margin-top: 2em;
+    position: absolute;
+}
