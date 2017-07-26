@@ -1,5 +1,5 @@
 #container {
-    border-radius: 5em;
+    /*border-radius: 5em;*/
     border: 6px dashed orange;
     width: 600px;
     height: 600px;
@@ -33,4 +33,33 @@ form {
     margin-left: 6em;
     margin-top: 2em;
     position: absolute;
+}
+
+/*Shapes*/
+#square {
+	width: 25px;
+	height: 25px;
+	background: #8A0018;
+}
+
+#circle {
+	width: 25px;
+	height: 25px;
+	background: #600060;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+#triangle {
+	width: 0;
+	height: 0;
+	border-bottom: 50px solid #FFFF74;
+	border-right: 50px solid transparent;
+}
+
+#rectangle {
+	width: 50px;
+	height: 25px;
+	background: #009947;
 }
