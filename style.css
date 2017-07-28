@@ -1,32 +1,54 @@
+body {
+    background: url("http://68.media.tumblr.com/tumblr_lo19494rcj1qlpz8eo1_r1_1280.jpg");
+    padding-top: 40px;
+    background-size: cover;
+    /*width: 1200px;
+    height: 800px;*/
+    background-repeat: no-repeat;
+}
+
 #container {
-    /*border-radius: 5em;*/
-    border: 6px dashed orange;
+    border: 6px solid black;
+    outline: 6px solid darksalmon;
     width: 600px;
     height: 600px;
-    background-color: cornflowerblue;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
+    background-color: blanchedalmond;
     float: right;
+    opacity: .75;
+    /*border-radius: 4em;*/
 }
 
 p {
-    font-size: 3em;
-    color: orange;
+    float: left;
+    font-size: 4em;
+    color: lightsalmon;
     text-align: center;
     font-weight: bold;
     font-family: fantasy;
 }
 
-body {
-    background-color: indianred;
+h5 {
+    font-family: fantasy;
+    color: grey;
 }
 
-#sidebar {
+#inserts {
     width: 20em;
     height: 20em;
-    background-color: cornflowerblue;
-    border: 5px dashed orange;
-    border-radius: 3em;
+    background-color: blanchedalmond;
+    border: 6px solid black;
+    outline: 6px solid darksalmon;
+    opacity: .75;
+}
+
+#dimensions {
+    width: 20em;
+    height: 20em;
+    background-color: blanchedalmond;
+    border: 6px solid black;
+    outline: 6px solid darksalmon;
+    opacity: .75;
+    float: bottom;
 }
 
 form {
