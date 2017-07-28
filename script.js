@@ -6,7 +6,7 @@ class Shapes {
         this.height = height;
         this.radius = radius;
         this.sides = sides;
-        this.perimeter = perimeter;
+        this.area = area;
     }
 }
 
@@ -18,21 +18,36 @@ class Circle extends Shapes {
 }
 
 class Square extends Shapes {
-    constructor(sides) {
+    constructor() {
         super(sides);
             this.hasSides = true;
     }
 }
 
 class Rectangle extends Shapes {
-    constructor(width, height) {
-        this.width = true;
-        this.height = true;
+    constructor() {
+        this.width = width;
+        this.height = height;
     }
 }
 
+
+  // note: NO comma needed
+  get area() {
+    return this.width * this.height;
+  }
+
+  // public static getter
+  // reachable through
+  // Rectangle.SHAPE
+  static get SHAPE() {
+    return 'Rectangle';
+  }
+
+}
+
 class Triangle extends Shapes {
-    constructor(height) {
+    constructor() {
         this.height = true;
     }
 } 
@@ -54,7 +69,7 @@ let Shapes = function() { };
     }
   };
   //this.x + ':' + this.y + ' ' + --cut from print function
-   
+
   var Circle = function() { this.radius = 20; };
   Circle.prototype = new Shape();
   Circle.prototype.draw = function(ctx) {
@@ -68,7 +83,7 @@ class Shapes {
         this.shape = document.createElement('div');
         this.shape.className = 'Triangle';
             document.body.appendChild(Circle);
-//draw shape
+//create draw function
 class Triangle extends Shapes {
     constructor(height) {
         super('Triangle');
@@ -76,3 +91,5 @@ class Triangle extends Shapes {
     }
 }
 };
+
+

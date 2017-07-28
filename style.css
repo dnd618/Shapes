@@ -19,7 +19,7 @@ body {
 }
 
 p {
-    float: left;
+    /*float: left;*/
     font-size: 4em;
     color: lightsalmon;
     text-align: center;
@@ -61,13 +61,13 @@ form {
 #square {
 	width: 25px;
 	height: 25px;
-	background: #8A0018;
+	background: #FF3855;
 }
 
 #circle {
 	width: 25px;
 	height: 25px;
-	background: #600060;
+	background: #9C51B6;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
@@ -76,12 +76,12 @@ form {
 #triangle {
 	width: 0;
 	height: 0;
-	border-bottom: 50px solid #FFFF74;
+	border-bottom: 50px solid #FFF700;
 	border-right: 50px solid transparent;
 }
 
 #rectangle {
 	width: 50px;
 	height: 25px;
-	background: #009947;
+	background: #87FF2A;
 }
