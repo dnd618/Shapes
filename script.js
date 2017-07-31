@@ -1,95 +1,185 @@
 
 
-class Shapes {
-    constructor(width, height, radius, side) {
-        this.width = width;
-        this.height = height;
-        this.radius = radius;
-        this.sides = sides;
-        this.area = area;
+// class Shapes {
+//     constructor(width, height, radius, side) {
+//         this.width = width;
+//         this.height = height;
+//         this.radius = radius;
+//         this.sides = sides;
+//         this.area = area;
+//     }
+// }
+
+// class Circle extends Shapes {
+//   constructor(radius) {
+//         super(radius);
+//             this.hasRadius = true;
+//   }
+// }
+
+// class Square extends Shapes {
+//     constructor() {
+//         super(sides);
+//             this.hasSides = true;
+//     }
+// }
+
+// class Rectangle extends Shapes {
+//     constructor() {
+//         this.width = width;
+//         this.height = height;
+//     }
+// }
+
+let squareArea=length*width
+let squareRadius= "N/A"
+let sideLength=length
+let squarePerimeter=sideLength*4
+let recPerimeter=2*(length+width)
+let circlePerimeter=2*Math.PI*radius
+let circleArea=Math.PI*(radius*radius)
+let triangleArea=0.5*(height)*(height)
+
+//Shape Class
+class Shapes{
+    constructor(name,width,height,radius,area,perimeter,shape,sideLength){
+        this.name=name;
+        this.width=width;
+        this.height=height;
+        this.radius=radius;
+      //  this.area=area;
+        this.shape=document.createElement('div')
+        this.shape.className=name
+        this.perimeter=perimeter;
+        this.sideLength=sideLength
+        this.shape.addEventListener('click',this.describe.bind(this));
+        this.shape.addEventListener('dblclick',this.removeShape.bind(this));
+
+         
+    }
+    describe(){
+    $("#name").html("Shape Name:"+this.name)
+    $("#width").html("Width:"+this.width)
+    $("#height").html("Height:"+this.height)
+    $("#radius").html("Radius:"+this.radius)
+    $("#area").html("Area:"+this.area)
+    $("#perimeter").html("Perimeter:"+this.perimeter)
+    $('#sideLength').html("Side Length:"+this.sideLength)
+}
+    draw(){
+        $('#shapeContainer').append(this.shape)
+        // let left=randomXY();
+        // let top=randomXY();
+        
+    }
+    removeShape(){
+        console.log('removed')
+        this.shape.remove();
     }
 }
 
-class Circle extends Shapes {
-  constructor(radius) {
-        super(radius);
-            this.hasRadius = true;
-  }
-}
-
-class Square extends Shapes {
-    constructor() {
-        super(sides);
-            this.hasSides = true;
-    }
-}
-
+// //Rectangle Class
 class Rectangle extends Shapes {
-    constructor() {
-        this.width = width;
-        this.height = height;
+    constructor(height,width,shape){
+        super('Rectangle');
+        this.height=height;
+        this.width=width;
+        this.shape.style.width = width+"px";
+        this.shape.style.height = height+"px";
+        this.shape.style.top=randomXY()+"px";
+        this.shape.style.left=randomXY()+"px";
+
+        
+    }
+    get area(){
+       return this.height*this.width;
     }
 }
+//Generate Rectangle
+$('#genRectangle').click(function(){
+    let height = document.getElementById("rectHeight").value;
+    let width = document.getElementById("rectWidth").value;
+    const rectangle= new Rectangle(height,width);
+    console.log(rectangle)
+    rectangle.draw()
+    rectangle.describe()
+    
+});
 
+// //Square Class
+class Square extends Shapes {
+    constructor(sideLength,shape){
+        super('Square');
+        this.sideLength=sideLength
+        this.shape.style.width = sideLength+"px"
+        this.shape.style.height = sideLength+"px"
+        this.shape.style.top=randomXY()+"px";
+        this.shape.style.left=randomXY()+"px";
 
-  // note: NO comma needed
-  get area() {
-    return this.width * this.height;
-  }
-
-  // public static getter
-  // reachable through
-  // Rectangle.SHAPE
-  static get SHAPE() {
-    return 'Rectangle';
-  }
-
+    }
+    get area(){
+       return this.sideLength*this.sideLength+"px"
+    }
 }
+//Generate Square
+$('#genSquare').click(function(){
+    let sideLength = document.getElementById("SlValue").value;
+    const square= new Square(sideLength);
+    console.log(square)
+    square.draw()
+    square.describe()
+    $("#SlValue").empty()    
+});
 
-class Triangle extends Shapes {
-    constructor() {
-        this.height = true;
+// //Circle Class
+class Circle extends Shapes {
+    constructor(radius,perimeter,area,shape){
+        super('Circle');
+        this.radius=radius;
+        console.log(Math.PI*(radius*radius))
+        this.perimeter=2*Math.PI*radius;
+        this.shape.style.width = 2*radius+"px";
+        this.shape.style.height=2*radius+"px";
+        this.shape.style.top=randomXY()+"px";
+        this.shape.style.left=randomXY()+"px";
     }
-} 
-
-let Shapes = function() { };
-   
-  Shape.prototype = {
-    // x: 30,
-    // y: 30,
-    width: 25,
-    height: 25,
-     
-    draw: function(ctx) {
-      throw new Error("This is parent method");
-    },
-     
-    print: function() {
-      console.log(this.width + '<>' + this.height);
+    get area(){
+       return Math.PI*(this.radius*this.radius)
     }
-  };
-  //this.x + ':' + this.y + ' ' + --cut from print function
-
-  var Circle = function() { this.radius = 20; };
-  Circle.prototype = new Shape();
-  Circle.prototype.draw = function(ctx) {
-    ctx.arc(12, 22, 66, 0, 2 * Math.PI, false);
-  };
-
-
-//In class example
-class Shapes {
-    constructor(width, height, radius, side) {
-        this.shape = document.createElement('div');
-        this.shape.className = 'Triangle';
-            document.body.appendChild(Circle);
-//create draw function
+}
+//Generate Circle
+$('#genCircle').click(function(){
+    let radius = document.getElementById("radValue").value;
+    const circle= new Circle(radius);
+    console.log(circle)
+    circle.draw()
+    circle.describe()
+    $("#radValue").empty()    
+});
+// //Triangle Class
 class Triangle extends Shapes {
-    constructor(height) {
+    constructor(height,width,shape){
         super('Triangle');
-        this.draw
+        this.height=height;
+        this.width=height;
+        this.shape.style.borderBottom=height+"px solid yellow";
+        this.shape.style.borderRight=height+"px solid lightblue";
+        this.shape.style.top=randomXY()+"px";
+        this.shape.style.left=randomXY()+"px";
+    }
+    get area(){
+       return 0.5*(this.height)*(this.height)
     }
 }
-};
-
-
+//Generate Triangle
+$('#genTriangle').click(function(){
+    let height = document.getElementById("triValue").value;
+    const triangle= new Triangle(height);
+    console.log(triangle)
+    triangle.draw()
+    triangle.describe()
+        
+});
+function randomXY(){
+    let ran= Math.floor(Math.random()*600);
+    return ran;

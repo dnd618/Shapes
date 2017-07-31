@@ -4,54 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shapin' Up</title>
     <link rel="stylesheet" href="style.css">
-    <title>Shapes</title>
 </head>
-<body>
-    <p>Shape Up Or Shape Out</p><br>
-    <div id="image">
-        <!--<img src="http://www.themesltd.com/headers2/gold_dripping_lips.png">-->
+<body class="background-color">
+    <h1>Shape Up or Shape Out</h1>
+<div id="whole-div">
+
+    <div id="inserts">
+        <div>
+            <p>Rectangle</p>
+            <input id="rectangle-height-input" type="text" placeholder="height">
+            <input id="rectangle-width-input" type="text" placeholder="width">
+            <button id="rect-btn" onclick="makeRectangle()">Insert</button>
+        </div>
+        <div>
+            <p>Square</p>
+            <input id="side-length-input" type="text" placeholder="side-length">
+            <button onclick="makeSquare()" id="square-btn">Insert</button>
+        </div>
+        <div>
+            <p>Circle</p>
+            <input id="radius-input" type="text" placeholder="radius">
+            <button onclick="makeCircle()" id="circle-btn">Insert</button>
+        </div>
+        <div>
+            <p> Isosceles Right Triangle</p>
+            <input id="triangle-height-input" type="text" placeholder="height">
+            <button id="triangle-btn" onclick="makeTriangle()">Insert</button>
+        </div>
+    </div>
+</div>
+
+    <div id="canvas" class="secondary-color relative float-right border-color-primary">  
     </div>
 
-<!--Container to hold shapes-->    
-    <div id="container">
-        <div id="circle">
-        </div>
-        <div id="square">
-        </div>
-        <div id="rectangle">
-        </div>
-        <div id="triangle">
-        </div>
-    </div>
-<!--Left Sidebar-->
-    <div id="inserts">
-        <form action="/action_page.php">
-            <input name="height" value="height">
-            <br>
-            <button>Insert Triangle</button><hr>
-            <input name="radius" value="radius">
-            <br>
-            <button>Insert Circle</button><hr>
-            <input name="side" value="side">
-            <br>
-            <button>Insert Square</button><hr>
-            <input name="height" value="height">
-            <br>
-            <input name="width" value="width">
-            <br><br>
-            <button>Insert Rectangle</button>
-        </form> 
-    </div>
-<!--Bottom Sidebar-->
     <div id="dimensions">
-        <h5>Shape:</h5>
-        <h5>Width:</h5>
-        <h5>Height:</h5>
-        <h5>Radius:</h5>
-        <h5>Area:</h5>
-        <h5>Perimeter</h5>
+            <p id="shape-name">Shape Name:</p>
+            <p id="shape-height">Height:</p>            
+            <p id ="shape-width">Width:</p>
+            <p id="shape-radius">Radius:</p>
+            <p id="shape-area">Area:</p>
+            <p id="shape-perimeter">Perimeter:</p>            
     </div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js" ></script>
 </html>
