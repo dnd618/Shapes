@@ -7,15 +7,17 @@ body {
 }
 
 h1 {
+    margin-left: 85px;
+    margin-top: -219px;
     font-size: 5em;
     color: lightgoldenrodyellow;
     text-align: center;
     font-weight: bold;
-    border: 5px solid;
     font-family: fantasy;
 }
 
 p {
+    margin-left: 1em;
     font-size: 24px;
     color: brown;
     font-weight: bold;
@@ -31,8 +33,17 @@ input {
 }
 
 button {
+    margin-left: 1em;
     font-size: 13px;
     color: mediumaquamarine;
+}
+
+img {
+    border: 5px solid sandybrown;
+    margin-left: 24em;
+    width: 500px;
+    height: 320px;
+    /* opacity: .9; */
 }
 /*DIVS*/
 #canvas {
@@ -41,7 +52,7 @@ button {
     width: 600px;
     overflow: hidden;
     border: 6px solid #BCEED2;
-    outline: 6px solid darksalmon;
+    outline: 6px solid brown;
     opacity: .85;
     float: bottom;
     background-color: #b1dda1;
@@ -52,7 +63,7 @@ button {
     height: 35em;
     background-color: #ffb0a6;
     border: 6px solid #BCEED2;
-    outline: 6px solid darksalmon;
+    outline: 6px solid brown;
     opacity: .75;
     margin-left: .75em;
 }
@@ -67,7 +78,7 @@ button {
     column-count: 2;
     width: 65em;
     height: 27em;
-    outline: 6px solid darksalmon;
+    outline: 6px solid brown;
     opacity: .50;
     float: bottom;
     padding-top: -2em;
