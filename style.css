@@ -1,25 +1,3 @@
- .text-align-center {
-    text-align: center;
-}
-
-.margin-20 {
-    margin: 20px 20px;
-}
-
-.float-right {
-    float: right;
-}
-
-.float-left {
-    float: left;
-}
-
- .relative {
-     position: relative
- } 
-
-
-
 body {
     max-width: 1200px;
     margin: 0 auto;
@@ -38,8 +16,8 @@ h1 {
 }
 
 p {
-    font-size: 20px;
-    color: #874e4c;
+    font-size: 24px;
+    color: brown;
     font-weight: bold;
     font-family: fantasy;
 }
@@ -56,7 +34,7 @@ button {
     font-size: 13px;
     color: mediumaquamarine;
 }
-
+/*DIVS*/
 #canvas {
     margin-top: -37em;
     height: 561px;
@@ -64,7 +42,7 @@ button {
     overflow: hidden;
     border: 6px solid #BCEED2;
     outline: 6px solid darksalmon;
-    opacity: .50;
+    opacity: .85;
     float: bottom;
     background-color: #b1dda1;
 }
@@ -98,26 +76,43 @@ button {
     background-color: #b1dda1;
     padding: 1em;
 }
-
+/*Shapes*/
  .square {
     background: #DA2647;
     position: absolute;
 }
-
 .rectangle {
-    background: #9DE093;
-    position: absolute;    
+    background: mediumseagreen;
+    position: absolute;
 }
-
 .circle {
     background: #C9A0DC;
     border-radius: 50%;
     position: absolute;    
    
 }
-
 .triangle {
     width: 0;
 	height: 0;
     position: absolute;        
 }  
+/*Alignment*/
+ .text-align-center {
+    text-align: center;
+}
+
+.margin-20 {
+    margin: 20px 20px;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+ .relative {
+     position: relative
+ } 

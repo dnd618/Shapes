@@ -116,7 +116,7 @@ class Triangle extends Shape {
     constructor() {
         super('triangle');
         this.shape.style.borderRight = triHeight.value + "px solid transparent",
-        this.shape.style.borderBottom = triHeight.value + "px solid #FAFA37",
+        this.shape.style.borderBottom = triHeight.value + "px solid #FFEE00",
         this.shape.style.borderTop = triHeight.value + "px solid transparent",
         this.area = 0.5 * 45 * triHeight.value;  
         this.draw();
