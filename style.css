@@ -1,4 +1,4 @@
-.text-align-center {
+ .text-align-center {
     text-align: center;
 }
 
@@ -16,29 +16,30 @@
 
  .relative {
      position: relative
- }
+ } 
 
 
 
 body {
     max-width: 1200px;
     margin: 0 auto;
-    background: url("http://68.media.tumblr.com/tumblr_lo19494rcj1qlpz8eo1_r1_1280.jpg");
+    background: url("https://www.holidayguru.ie/wp-content/uploads/2016/05/Palm-Trees-Hollywood-Los-Angeles-iStock_000032047156_Large-2.jpg");
     padding-top: 40px;
     /* background-repeat: no-repeat; */
 }
 
 h1 {
-    font-size: 4em;
-    color: lightsalmon;
+    font-size: 5em;
+    color: lightgoldenrodyellow;
     text-align: center;
     font-weight: bold;
+    border: 5px solid;
     font-family: fantasy;
 }
 
 p {
     font-size: 20px;
-    color: grey;
+    color: #874e4c;
     font-weight: bold;
     font-family: fantasy;
 }
@@ -53,26 +54,29 @@ input {
 
 button {
     font-size: 13px;
+    color: mediumaquamarine;
 }
 
 #canvas {
-    height: 600px;
+    margin-top: -37em;
+    height: 561px;
     width: 600px;
     overflow: hidden;
-    background-color: blanchedalmond;
-    border: 6px solid black;
+    border: 6px solid #BCEED2;
     outline: 6px solid darksalmon;
-    opacity: .75;
+    opacity: .50;
     float: bottom;
+    background-color: #b1dda1;
 }
 
 #inserts {
-    width: 22em;
+    width: 30em;
     height: 35em;
-    background-color: blanchedalmond;
-    border: 6px solid black;
+    background-color: #ffb0a6;
+    border: 6px solid #BCEED2;
     outline: 6px solid darksalmon;
     opacity: .75;
+    margin-left: .75em;
 }
 
 #whole-div {
@@ -80,27 +84,33 @@ button {
 }
 
 #dimensions {
-    width: 22em;
-    height: 34em;
-    background-color: blanchedalmond;
-    border: 6px solid black;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    width: 65em;
+    height: 27em;
     outline: 6px solid darksalmon;
-    opacity: .75;
+    opacity: .50;
     float: bottom;
+    padding-top: -2em;
+    margin-top: 5em;
+    margin-left: 5em;
+    background-color: #b1dda1;
+    padding: 1em;
 }
 
  .square {
-    background: #FF3855;
+    background: #DA2647;
     position: absolute;
 }
 
 .rectangle {
-    background: #87FF2A;
+    background: #9DE093;
     position: absolute;    
 }
 
 .circle {
-    background: #9C51B6;
+    background: #C9A0DC;
     border-radius: 50%;
     position: absolute;    
    
